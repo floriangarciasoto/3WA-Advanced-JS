@@ -3,16 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>fieldset:not(.in-edit) > .edit, fieldset.in-edit > .non-edit {display: none;}</style>
 	<title>Todo-Lists</title>
 </head>
 <body>
 	<h1>Todo-Lists</h1>
 	<p>Liste des todos : </p>
-	<div id="todos"></div>
+	<div id="todos-list"></div>
 	<fieldset id="todo-create">
-		<div id="create-todo-btn-dv" class="non-edit"><button id="create-todo" class="show-edit non-listened">Créer une TODO</button></div>
-		<form class="edit"></form>
+		<legend>Créer / Modifier</legend>
+		<select id="todos-sl"><option value="0">Créer</option></select>
+		<form>
+			Nom : <input type="text" name="name"><br>
+			Description : <input type="text" name="description"><br>
+			A faire pour le : <input type="date" name="duedate"><br>
+			Priorité : <select name="priority">
+				<option value="0">Pas urgent</option>
+				<option value="1">Normal</option>
+				<option value="2">Urgent</option>
+			</select><br>
+			<button id="cancel-edit">Annuler</button> <button id="todo-submit">OK</button> <button id="todo-delete">Supprimer</button>
+		</form>
 	</fieldset>
 	<script type="module" src="index.js"></script>
 </body>

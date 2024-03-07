@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>fieldset:not(.in-edit) > .edit, fieldset.in-edit > .non-edit {display: none;}</style>
+	<title>Todo-Lists</title>
+</head>
+<body>
+	<h1>Todo-Lists</h1>
+	<p>Liste des todos : </p>
+	<div id="todos"></div>
+	<fieldset id="todo-create">
+		<div id="create-todo-btn-dv" class="non-edit"><button id="create-todo" class="show-edit non-listened">Créer une TODO</button></div>
+		<form class="edit"></form>
+	</fieldset>
+	<script type="module" src="index.js"></script>
+</body>
+</html>
